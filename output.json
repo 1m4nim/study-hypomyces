@@ -1,0 +1,698 @@
+[
+  {
+    "hypomyces_species": "Hypomyces boletuphus",
+    "host_genus": "Boletaceae sp.",
+    "host_species": "",
+    "distribution": "",
+    "source": "Fungicolous fungi.pdf",
+    "notes": "a"
+  },
+  {
+    "hypomyces_species": "Hypomyces mycophilus",
+    "host_genus": "Agaricomycetes",
+    "host_species": "",
+    "distribution": "",
+    "source": "Fungicolous fungi.pdf",
+    "notes": "b"
+  },
+  {
+    "hypomyces_species": "Hypomyces rosellus",
+    "host_genus": "",
+    "host_species": "Agaricus bisporus",
+    "distribution": "",
+    "source": "Fungicolous fungi.pdf",
+    "notes": "f"
+  },
+  {
+    "hypomyces_species": "Hypomyces sp.",
+    "host_genus": "Polyporaceae",
+    "host_species": "",
+    "distribution": "",
+    "source": "Fungicolous fungi.pdf",
+    "notes": "h"
+  },
+  {
+    "hypomyces_species": "Hypomyces amaniticola",
+    "host_genus": "Amanita sp.",
+    "host_species": "",
+    "distribution": "China, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "hypomyces aurantius",
+    "host_genus": "",
+    "host_species": "Agaricus bisporus",
+    "distribution": "China, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "hypomyces aurantius",
+    "host_genus": "Polyporales",
+    "host_species": "",
+    "distribution": "China, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "hypomyces aurantius",
+    "host_genus": "Cymatoderma sp.",
+    "host_species": "",
+    "distribution": "China, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "hypomyces aurantius",
+    "host_genus": "",
+    "host_species": "Laetiporus sulphureus",
+    "distribution": "China, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "hypomyces aurantius",
+    "host_genus": "Panellus sp.",
+    "host_species": "",
+    "distribution": "China, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "hypomyces aurantius",
+    "host_genus": "Polyporus spicipes",
+    "host_species": "",
+    "distribution": "China, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "hypomyces aurantius",
+    "host_genus": "Stereum sp.",
+    "host_species": "",
+    "distribution": "China, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces aureonitens",
+    "host_genus": "",
+    "host_species": "Phlebia tremellosa",
+    "distribution": "China, Europe",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces aureonitens",
+    "host_genus": "Polyporus sp.",
+    "host_species": "",
+    "distribution": "China, Europe",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces chlorinigenus",
+    "host_genus": "Agaricaceae",
+    "host_species": "",
+    "distribution": "Belgium, China, Guyana, Indonesia,NewZealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces chlorinigenus",
+    "host_genus": "Boletaceae",
+    "host_species": "",
+    "distribution": "Belgium, China, Guyana, Indonesia,NewZealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces chrysospermus",
+    "host_genus": "Boletus sp.",
+    "host_species": "",
+    "distribution": "China, Russia",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces chrysospermus",
+    "host_genus": "",
+    "host_species": "Hemileccinum impolitum",
+    "distribution": "China, Russia",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces chrysospermus",
+    "host_genus": "",
+    "host_species": "Suillus americanus",
+    "distribution": "China, Russia",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces chrysospermus",
+    "host_genus": "Russula sp.",
+    "host_species": "",
+    "distribution": "China, Russia",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces completiopsis",
+    "host_genus": "Boletus sp.",
+    "host_species": "",
+    "distribution": "China",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces fistulina",
+    "host_genus": "Fistulina sp.",
+    "host_species": "",
+    "distribution": "China",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces hubeiensis",
+    "host_genus": "Agaricus sp.",
+    "host_species": "",
+    "distribution": "China",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces hyalinus",
+    "host_genus": "Agaricales (Amanita sp.)",
+    "host_species": "",
+    "distribution": "Canada, China, Japan, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces hyalinus",
+    "host_genus": "Polyporales",
+    "host_species": "",
+    "distribution": "Canada, China, Japan, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces lateritius",
+    "host_genus": "",
+    "host_species": "Lactarius camphoratus",
+    "distribution": "Canada, China, Europe, Japan, Mexico, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces lateritius",
+    "host_genus": "",
+    "host_species": "Lactarius chelidonium",
+    "distribution": "Canada, China, Europe, Japan, Mexico, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces lateritius",
+    "host_genus": "",
+    "host_species": "Lactarius controversus",
+    "distribution": "Canada, China, Europe, Japan, Mexico, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces lateritius",
+    "host_genus": "",
+    "host_species": "Lactarius deliciosus",
+    "distribution": "Canada, China, Europe, Japan, Mexico, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces lateritius",
+    "host_genus": "",
+    "host_species": "Lactarius sanguifluus",
+    "distribution": "Canada, China, Europe, Japan, Mexico, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces lateritius",
+    "host_genus": "",
+    "host_species": "Lactrarius thejogalus",
+    "distribution": "Canada, China, Europe, Japan, Mexico, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces lateritius",
+    "host_genus": "",
+    "host_species": "Lactrarius trivialis",
+    "distribution": "Canada, China, Europe, Japan, Mexico, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces lateritius",
+    "host_genus": "Lactarius sp.",
+    "host_species": "",
+    "distribution": "Canada, China, Europe, Japan, Mexico, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces luteovirens",
+    "host_genus": "",
+    "host_species": "Russula atropurpurea",
+    "distribution": "Canada, China, Europe, Japan, Russia, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces luteovirens",
+    "host_genus": "",
+    "host_species": "Russula rosea",
+    "distribution": "Canada, China, Europe, Japan, Russia, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces luteovirens",
+    "host_genus": "",
+    "host_species": "Russula sanguinaria",
+    "distribution": "Canada, China, Europe, Japan, Russia, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces luteovirens",
+    "host_genus": "Russula sp.",
+    "host_species": "",
+    "distribution": "Canada, China, Europe, Japan, Russia, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces macrosporus",
+    "host_genus": "Russulaceae",
+    "host_species": "",
+    "distribution": "China, Mexico, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces microspermus",
+    "host_genus": "Boletaceae",
+    "host_species": "",
+    "distribution": "Canada, China, indonesia, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces microspermus",
+    "host_genus": "Boletus sp.",
+    "host_species": "",
+    "distribution": "Canada, China, indonesia, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces microspermus",
+    "host_genus": "",
+    "host_species": "Imleria badia",
+    "distribution": "Canada, China, indonesia, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces microspermus",
+    "host_genus": "",
+    "host_species": "Xanthoconium affine",
+    "distribution": "Canada, China, indonesia, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces microspermus",
+    "host_genus": "",
+    "host_species": "Xerocomellus chrysenteron",
+    "distribution": "Canada, China, indonesia, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces microspermus",
+    "host_genus": "Xerocomus sp.",
+    "host_species": "",
+    "distribution": "Canada, China, indonesia, New Zealand, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces mycophilus",
+    "host_genus": "Auricularia sp.",
+    "host_species": "",
+    "distribution": "China, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces mycophilus",
+    "host_genus": "Bulgari sp.",
+    "host_species": "",
+    "distribution": "China, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces mycophilus",
+    "host_genus": "Marasmius sp.",
+    "host_species": "",
+    "distribution": "China, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces mycophilus",
+    "host_genus": "Polyporus sp.",
+    "host_species": "",
+    "distribution": "China, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces mycophilus",
+    "host_genus": "",
+    "host_species": "Trametes versicolor",
+    "distribution": "China, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces ochraceus",
+    "host_genus": "",
+    "host_species": "Decaying leaves",
+    "distribution": "China, Europe, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces ochraceus",
+    "host_genus": "",
+    "host_species": "wood and fungi (e.g.Russula sp.)",
+    "distribution": "China, Europe, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces orthosporus",
+    "host_genus": "",
+    "host_species": "Polyporales",
+    "distribution": "China, Estonia, Finland, The Netherlands",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces papulasporae",
+    "host_genus": "",
+    "host_species": "Geoglossum difforme",
+    "distribution": "China, USA, New Zealand",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces papulasporae",
+    "host_genus": "",
+    "host_species": "Geoglossum fallax",
+    "distribution": "China, USA, New Zealand",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces papulasporae",
+    "host_genus": "",
+    "host_species": "Geoglossum glabrum",
+    "distribution": "China, USA, New Zealand",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces papulasporae",
+    "host_genus": "",
+    "host_species": "Geoglossum nigritum",
+    "distribution": "China, USA, New Zealand",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces papulasporae",
+    "host_genus": "",
+    "host_species": "Geoglossum simile",
+    "distribution": "China, USA, New Zealand",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces papulasporae",
+    "host_genus": "",
+    "host_species": "Glutinoglossum glutinosum",
+    "distribution": "China, USA, New Zealand",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces papulasporae",
+    "host_genus": "",
+    "host_species": "Trichoglossum hirsutum,",
+    "distribution": "China, USA, New Zealand",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces papulasporae",
+    "host_genus": "",
+    "host_species": "Trichoglossum walteri",
+    "distribution": "China, USA, New Zealand",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces polyporinus",
+    "host_genus": "",
+    "host_species": "Auricularia auricula-judae",
+    "distribution": "Canada, China, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces polyporinus",
+    "host_genus": "",
+    "host_species": "Polyporales",
+    "distribution": "Canada, China, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces polyporinus",
+    "host_genus": "",
+    "host_species": "Trametes versicolor",
+    "distribution": "Canada, China, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces polyporinus",
+    "host_genus": "",
+    "host_species": "Trametes pubescens",
+    "distribution": "Canada, China, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces polyporinus",
+    "host_genus": "Polyporus sp.",
+    "host_species": "",
+    "distribution": "Canada, China, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces pseudolactifluorum\r\nsp. nov.",
+    "host_genus": "Russula sp.",
+    "host_species": "",
+    "distribution": "China",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces rosellus",
+    "host_genus": "",
+    "host_species": "Agaricus bisporus",
+    "distribution": "China, Europe, Iran, Japan, Korea, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces rosellus",
+    "host_genus": "Amanita sp.",
+    "host_species": "",
+    "distribution": "China, Europe, Iran, Japan, Korea, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces rosellus",
+    "host_genus": "Hydnellum sp.",
+    "host_species": "",
+    "distribution": "China, Europe, Iran, Japan, Korea, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces rosellus",
+    "host_genus": "Hyphoderma sp.",
+    "host_species": "",
+    "distribution": "China, Europe, Iran, Japan, Korea, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces rosellus",
+    "host_genus": "Mycena sp.",
+    "host_species": "",
+    "distribution": "China, Europe, Iran, Japan, Korea, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces rosellus",
+    "host_genus": "Polyporus sp.",
+    "host_species": "",
+    "distribution": "China, Europe, Iran, Japan, Korea, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces rosellus",
+    "host_genus": "Russula sp.",
+    "host_species": "",
+    "distribution": "China, Europe, Iran, Japan, Korea, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces rosellus",
+    "host_genus": "Trichaptum sp.",
+    "host_species": "",
+    "distribution": "China, Europe, Iran, Japan, Korea, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces semicircularis",
+    "host_genus": "",
+    "host_species": "Ganoderma sichuanense",
+    "distribution": "Cuba, China",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces semicircularis",
+    "host_genus": "",
+    "host_species": "Microporus xanthopus",
+    "distribution": "Cuba, China",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces sibirinae",
+    "host_genus": "",
+    "host_species": "Aphyllophorales",
+    "distribution": "China, Indonesia, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces sibirinae",
+    "host_genus": "Boletus sp.",
+    "host_species": "",
+    "distribution": "China, Indonesia, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces sibirinae",
+    "host_genus": "",
+    "host_species": "Polyporales",
+    "distribution": "China, Indonesia, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces sinicus",
+    "host_genus": "Schizophyllum sp.",
+    "host_species": "",
+    "distribution": "China",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces stephanomatis",
+    "host_genus": "",
+    "host_species": "Humaria hemisphaerica",
+    "distribution": "Canada, Cuba, Japan",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces stephanomatis",
+    "host_genus": "Humaria sp.",
+    "host_species": "",
+    "distribution": "Canada, Cuba, Japan",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces subiculosus",
+    "host_genus": "Polyporaceae (Microporus affinis,\nTrametes versicolo)",
+    "host_species": "",
+    "distribution": "China, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces tegillum",
+    "host_genus": "",
+    "host_species": "Aphyllophorales",
+    "distribution": "Brazil, China, Panama, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces tegillum",
+    "host_genus": "",
+    "host_species": "Polyporales",
+    "distribution": "Brazil, China, Panama, USA",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces triseptatus",
+    "host_genus": "Bark or associated with an ascomycete: Pyrenomycete",
+    "host_species": "",
+    "distribution": "China, Gabon",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  },
+  {
+    "hypomyces_species": "Hypomyces yunnanensis",
+    "host_genus": "Boletus sp.",
+    "host_species": "",
+    "distribution": "China",
+    "source": "Hypomyces pseudolactifluorum sp. nov.\n(Hypocreales: Hypocreaceae) on Russula sp.\nfrom Yunnan, PR China.pdf",
+    "notes": ""
+  }
+]

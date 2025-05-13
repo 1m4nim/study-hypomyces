@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Data Display</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JSON Data from Spreadsheet</h1>
+
+    <table id="data-table">
+      <thead>
+        <tr id="headers-row">
+          <!-- ヘッダーがここに表示されます -->
+        </tr>
+      </thead>
+      <tbody>
+        <!-- データがここに表示されます -->
+      </tbody>
+    </table>
+
+    <script>
+      // JSONファイルを読み込む
+      fetch("output.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const table = document.getElementById("data-table");
+          const headersRow = document.getElementById("headers-row");
+
+          // ヘッダーを作成
+          const headers = Object.keys(data[0]);
+          headers.forEach((header) => {
+            const th = document.createElement("th");
+            th.textContent = header;
+            headersRow.appendChild(th);
+          });
+
+          // データを作成
+          data.forEach((entry) => {
+            const tr = document.createElement("tr");
+            headers.forEach((header) => {
+              const td = document.createElement("td");
+              td.textContent = entry[header];
+              tr.appendChild(td);
+            });
+            table.querySelector("tbody").appendChild(tr);
+          });
+        })
+        .catch((error) => console.error("Error loading JSON data:", error));
+    </script>
+  </body>
+</html>

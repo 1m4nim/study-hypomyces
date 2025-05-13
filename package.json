@@ -10,11 +10,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^22.15.17",
     "@types/pdfkit": "^0.13.9",
     "fs": "^0.0.1-security",
     "googleapis": "^148.0.0",
+    "html-pdf": "^3.0.1",
     "pdf-lib": "^1.17.1",
-    "pdfkit": "^0.17.1"
+    "pdfkit": "^0.17.1",
+    "phantomjs-prebuilt": "^2.1.16"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.17",
+    "typescript": "^5.8.3"
   }
 }

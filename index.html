@@ -20,6 +20,12 @@
         text-align: left;
       }
     </style>
+
+    <!-- ✅ jsPDF本体（v2.5.1） -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- ✅ autoTableプラグイン（v3.5.25） -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
   </head>
   <body>
     <h1>JSON Data from Spreadsheet</h1>
@@ -35,15 +41,17 @@
       </tbody>
     </table>
 
+    <button id="generate-pdf">PDFを生成</button>
+
     <script>
-      // JSONファイルを読み込む
+      // JSONファイルを読み込んで表を作成
       fetch("output.json")
         .then((response) => response.json())
         .then((data) => {
           const table = document.getElementById("data-table");
           const headersRow = document.getElementById("headers-row");
 
-          // ヘッダーを作成
+          // ヘッダーの生成
           const headers = Object.keys(data[0]);
           headers.forEach((header) => {
             const th = document.createElement("th");
@@ -51,7 +59,7 @@
             headersRow.appendChild(th);
           });
 
-          // データを作成
+          // データ行の生成
           data.forEach((entry) => {
             const tr = document.createElement("tr");
             headers.forEach((header) => {
@@ -63,6 +71,19 @@
           });
         })
         .catch((error) => console.error("Error loading JSON data:", error));
+
+      // PDF出力処理
+      document.getElementById("generate-pdf").addEventListener("click", () => {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        if (typeof doc.autoTable === "function") {
+          doc.autoTable({ html: "#data-table" });
+          doc.save("table.pdf");
+        } else {
+          console.error("autoTable is not available.");
+        }
+      });
     </script>
   </body>
 </html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypomyces Species List</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 印刷用のスタイル */
+        @media print {
+            body {
+                font-family: Arial, sans-serif;
+                padding: 20px;
+                background-color: white;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                border: 2px solid #ddd;
+            }
+
+            th,
+            td {
+                padding: 12px 15px;
+                text-align: left;
+                border: 1px solid #ddd;
+                font-size: 14px;
+            }
+
+            th {
+                background-color: #4CAF50;
+                color: white;
+                font-weight: bold;
+            }
+
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+
+            tr:nth-child(odd) {
+                background-color: #ffffff;
+            }
+
+            tr:hover {
+                background-color: #f1f1f1;
+            }
+
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #333;
+            }
+
+            /* 印刷ボタンのスタイル */
+            button {
+                display: block;
+                margin: 20px auto;
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+            button:hover {
+                background-color: #45a049;
+            }
+        }
+
+        /* スクリーン用のデザイン */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hypomyces Species List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Hypomyces species</th>
+                <th>Host genus</th>
+                <th>Host species</th>
+                <th>Distribution</th>
+                <th>Source</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody id="species-data">
+            <!-- JSONデータがここに埋め込まれます -->
+        </tbody>
+    </table>
+
+    <button onclick="window.print()">印刷</button>
+
+    <script>
+        // output.json を読み込み
+        fetch('output.json')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.getElementById('species-data');
+
+                // データをテーブルに挿入
+                data.forEach(item => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${item.hypomyces_species}</td>
+                        <td>${item.host_genus}</td>
+                        <td>${item.host_species}</td>
+                        <td>${item.distribution}</td>
+                        <td>${item.source}</td>
+                        <td>${item.notes}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error loading the JSON file:', error));
+    </script>
+</body>
+
+</html>

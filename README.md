@@ -1,7 +1,8 @@
 # study-hypomyces
 
 https://study-hypomyces.vercel.app/ <br/>
-https://1m4nim.github.io/study-hypomyces/
+https://1m4nim.github.io/study-hypomyces/ <br/>
+(どっちでも行けるよ！！！)
 
 ## 2025/05/13
 

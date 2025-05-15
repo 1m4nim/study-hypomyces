@@ -1,105 +1,117 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>JSON読み込み例</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <button id="btn-pdf">PDF化する</button>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="table-container"></div>
 
-
     <script>
-        // JSON読み込みとテーブル生成
-        fetch('organized.json')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('table-container');
-                container.innerHTML = '';
+      // JSON読み込みとテーブル生成
+      fetch("organized.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const container = document.getElementById("table-container");
+          container.innerHTML = "";
 
-                // data はオブジェクトでキーがHypomyces名なのでループで回す
-                for (const hypomycesName in data) {
-                    // タイトル表示
-                    const title = document.createElement('h2');
-                    title.textContent = hypomycesName;
-                    container.appendChild(title);
+          // data はオブジェクトでキーがHypomyces名なのでループで回す
+          for (const hypomycesName in data) {
+            // タイトル表示
+            const title = document.createElement("h2");
+            title.textContent = hypomycesName;
+            container.appendChild(title);
 
-                    // そのHypomycesのhost_genusオブジェクト
-                    const hosts = data[hypomycesName];
+            // そのHypomycesのhost_genusオブジェクト
+            const hosts = data[hypomycesName];
 
-                    // hostsの中の最初の配列の一番最初のオブジェクトのキーを列名として使う
-                    // （複数の配列の要素は同じ構造と仮定）
-                    let firstHostArray = Object.values(hosts)[0];
-                    if (!firstHostArray) continue;
-                    let keys = Object.keys(firstHostArray[0]);
+            // hostsの中の最初の配列の一番最初のオブジェクトのキーを列名として使う
+            // （複数の配列の要素は同じ構造と仮定）
+            let firstHostArray = Object.values(hosts)[0];
+            if (!firstHostArray) continue;
+            let keys = Object.keys(firstHostArray[0]);
 
-                    // テーブル作成
-                    let table = document.createElement('table');
-                    table.style.borderCollapse = 'collapse';
-                    table.style.marginBottom = '20px';
+            // テーブル作成
+            let table = document.createElement("table");
+            table.style.borderCollapse = "collapse";
+            table.style.marginBottom = "20px";
 
-                    // thead作成
-                    let thead = document.createElement('thead');
-                    let trHead = document.createElement('tr');
-                    keys.forEach(key => {
-                        let th = document.createElement('th');
-                        th.textContent = key;
-                        th.style.border = '1px solid black';
-                        th.style.padding = '4px';
-                        trHead.appendChild(th);
-                    });
-                    thead.appendChild(trHead);
-                    table.appendChild(thead);
-
-                    // tbody作成
-                    let tbody = document.createElement('tbody');
-
-                    // hosts のすべての配列の中身を順番にtbodyに入れる
-                    for (const hostGenus in hosts) {
-                        hosts[hostGenus].forEach(item => {
-                            let tr = document.createElement('tr');
-                            keys.forEach(key => {
-                                let td = document.createElement('td');
-                                td.textContent = item[key];
-                                td.style.border = '1px solid black';
-                                td.style.padding = '4px';
-                                tr.appendChild(td);
-                            });
-                            tbody.appendChild(tr);
-                        });
-                    }
-
-                    table.appendChild(tbody);
-                    container.appendChild(table);
-                }
-            })
-            .catch(err => {
-                console.error('JSON読み込みエラー:', err);
+            // thead作成
+            let thead = document.createElement("thead");
+            let trHead = document.createElement("tr");
+            keys.forEach((key) => {
+              let th = document.createElement("th");
+              th.textContent = key;
+              th.style.border = "1px solid black";
+              th.style.padding = "4px";
+              trHead.appendChild(th);
             });
+            thead.appendChild(trHead);
+            table.appendChild(thead);
 
-        // PDF化ボタンの処理
-        document.getElementById('btn-pdf').addEventListener('click', () => {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
+            // tbody作成
+            let tbody = document.createElement("tbody");
 
-            const tableContainer = document.getElementById('table-container');
+            // hosts のすべての配列の中身を順番にtbodyに入れる
+            for (const hostGenus in hosts) {
+              hosts[hostGenus].forEach((item) => {
+                let tr = document.createElement("tr");
+                keys.forEach((key) => {
+                  let td = document.createElement("td");
+                  td.textContent = item[key];
+                  td.style.border = "1px solid black";
+                  td.style.padding = "4px";
+                  tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+              });
+            }
 
-            // html2canvasでキャプチャ
-            html2canvas(tableContainer).then(canvas => {
-                const imgData = canvas.toDataURL('image/png');
-                const imgProps = doc.getImageProperties(imgData);
-                const pdfWidth = doc.internal.pageSize.getWidth();
-                const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-
-                doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-                doc.save('table.pdf');
-            });
+            table.appendChild(tbody);
+            container.appendChild(table);
+          }
+        })
+        .catch((err) => {
+          console.error("JSON読み込みエラー:", err);
         });
-    </script>
-</body>
 
+      // PDF化ボタンの処理
+      document.getElementById("btn-pdf").addEventListener("click", () => {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF("p", "mm", "a4");
+
+        const tableContainer = document.getElementById("table-container");
+
+        html2canvas(tableContainer, { scale: 2 }).then((canvas) => {
+          const imgData = canvas.toDataURL("image/png");
+
+          const imgWidth = 210; // A4 width in mm
+          const pageHeight = 297; // A4 height in mm
+          const imgProps = doc.getImageProperties(imgData);
+          const imgHeight = (imgProps.height * imgWidth) / imgProps.width;
+
+          let heightLeft = imgHeight;
+          let position = 0;
+
+          // 最初のページ
+          doc.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+          heightLeft -= pageHeight;
+
+          // 次ページ以降が必要なら追加
+          while (heightLeft > 0) {
+            position = heightLeft - imgHeight;
+            doc.addPage();
+            doc.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+            heightLeft -= pageHeight;
+          }
+
+          doc.save("table.pdf");
+        });
+      });
+    </script>
+  </body>
 </html>

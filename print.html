@@ -1,162 +1,162 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hypomyces Species List</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-        /* スクリーン用のデザイン */
+      /* スクリーン用のデザイン */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: left;
+        border: 1px solid #ddd;
+        font-size: 14px;
+      }
+
+      th {
+        background-color: #4caf50;
+        color: white;
+        font-weight: bold;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #ffffff;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      /* 印刷用スタイルも残しておきます */
+      @media print {
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+          font-family: Arial, sans-serif;
+          padding: 20px;
+          background-color: white;
         }
 
         table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+          border: 2px solid #ddd;
         }
 
         th,
         td {
-            padding: 12px 15px;
-            text-align: left;
-            border: 1px solid #ddd;
-            font-size: 14px;
+          padding: 12px 15px;
+          text-align: left;
+          border: 1px solid #ddd;
+          font-size: 14px;
         }
 
         th {
-            background-color: #4CAF50;
-            color: white;
-            font-weight: bold;
+          background-color: #4caf50;
+          color: white;
+          font-weight: bold;
         }
 
         tr:nth-child(even) {
-            background-color: #f9f9f9;
+          background-color: #f9f9f9;
         }
 
         tr:nth-child(odd) {
-            background-color: #ffffff;
+          background-color: #ffffff;
         }
 
         tr:hover {
-            background-color: #f1f1f1;
+          background-color: #f1f1f1;
         }
 
         h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333;
+          text-align: center;
+          margin-bottom: 20px;
+          color: #333;
         }
+      }
 
-        /* 印刷用スタイルも残しておきます */
-        @media print {
-            body {
-                font-family: Arial, sans-serif;
-                padding: 20px;
-                background-color: white;
-            }
+      /* PDF化ボタンのスタイル */
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
 
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                margin-top: 20px;
-                border: 2px solid #ddd;
-            }
-
-            th,
-            td {
-                padding: 12px 15px;
-                text-align: left;
-                border: 1px solid #ddd;
-                font-size: 14px;
-            }
-
-            th {
-                background-color: #4CAF50;
-                color: white;
-                font-weight: bold;
-            }
-
-            tr:nth-child(even) {
-                background-color: #f9f9f9;
-            }
-
-            tr:nth-child(odd) {
-                background-color: #ffffff;
-            }
-
-            tr:hover {
-                background-color: #f1f1f1;
-            }
-
-            h1 {
-                text-align: center;
-                margin-bottom: 20px;
-                color: #333;
-            }
-        }
-
-        /* PDF化ボタンのスタイル */
-        button {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
+      button:hover {
+        background-color: #45a049;
+      }
     </style>
 
     <!-- jsPDFとhtml2canvasをCDNで読み込み -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
     <button id="btn-pdf">PDF化する</button>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <h1>Hypomyces Species List</h1>
     <table>
-        <thead>
-            <tr>
-                <th>Hypomyces species</th>
-                <th>Host genus</th>
-                <th>Host species</th>
-                <th>Distribution</th>
-                <th>Source</th>
-                <th>Notes</th>
-            </tr>
-        </thead>
-        <tbody id="species-data">
-            <!-- JSONデータがここに埋め込まれます -->
-        </tbody>
+      <thead>
+        <tr>
+          <th>Hypomyces species</th>
+          <th>Host genus</th>
+          <th>Host species</th>
+          <th>Distribution</th>
+          <th>Source</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody id="species-data">
+        <!-- JSONデータがここに埋め込まれます -->
+      </tbody>
     </table>
 
-
     <script>
-        // JSON読み込みしてテーブルに挿入
-        fetch('output.json')
-            .then(response => response.json())
-            .then(data => {
-                const tableBody = document.getElementById('species-data');
+      // JSON読み込みしてテーブルに挿入
+      fetch("output.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const tableBody = document.getElementById("species-data");
 
-                data.forEach(item => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
+          data.forEach((item) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
                         <td>${item.hypomyces_species}</td>
                         <td>${item.host_genus}</td>
                         <td>${item.host_species}</td>
@@ -164,30 +164,27 @@
                         <td>${item.source}</td>
                         <td>${item.notes}</td>
                     `;
-                    tableBody.appendChild(row);
-                });
-            })
-            .catch(error => console.error('Error loading the JSON file:', error));
+            tableBody.appendChild(row);
+          });
+        })
+        .catch((error) => console.error("Error loading the JSON file:", error));
 
-        // PDF化処理
-        document.getElementById('btn-pdf').addEventListener('click', () => {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
+      // PDF化処理
 
-            const element = document.querySelector('table');
+      document.getElementById("btn-pdf").addEventListener("click", () => {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
 
-            // html2canvasでテーブルをキャプチャしてPDFに貼り付ける
-            html2canvas(element, { scale: 2 }).then(canvas => {
-                const imgData = canvas.toDataURL('image/png');
-                const imgProps = doc.getImageProperties(imgData);
-                const pdfWidth = doc.internal.pageSize.getWidth();
-                const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-
-                doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-                doc.save('Hypomyces_species_list.pdf');
-            });
+        doc.autoTable({
+          html: "table", // ← HTMLのテーブルから自動生成
+          startY: 20,
+          headStyles: { fillColor: [76, 175, 80] }, // 緑のヘッダー
+          styles: { fontSize: 10, cellPadding: 3 },
+          margin: { top: 20 },
         });
-    </script>
-</body>
 
+        doc.save("table.pdf");
+      });
+    </script>
+  </body>
 </html>

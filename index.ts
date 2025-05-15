@@ -1,6 +1,6 @@
-import { google } from "googleapis";
-import fs from "fs";
-import path from "path";
+const { google } = require("googleapis");
+const path = require("path");
+const fs = require("fs");
 
 // サービスアカウントキーのパス
 const KEYFILE = path.join(__dirname, "service-account.json");
@@ -52,23 +52,23 @@ async function main() {
     range: RANGE,
   });
 
-  const rows = res.data.values;
+  const rows = res.data.values as string[][];
   if (!rows || rows.length === 0) {
     console.log("No data found.");
     return;
   }
 
-  // ヘッダーとデータをJSON形式に変換
-  const headers = rows[0];
+  const headers: string[] = rows[0];
+
   const jsonData: HypomycesRecord[] = rows.slice(1).map((row) => {
     const entry: Record<string, string> = {};
-    headers.forEach((header, i) => {
+    headers.forEach((header: string, i: number) => {
       entry[header] = row[i] || "";
     });
     return entry as HypomycesRecord;
   });
 
-  // 保存（必要ならコメントアウト可）
+  // 保存
   fs.writeFileSync("output.json", JSON.stringify(jsonData, null, 2));
   console.log("✅ output.json に保存されました");
 

@@ -5,7 +5,6 @@ import path from "path";
 // サービスアカウントキーのパス
 const KEYFILE = path.join(__dirname, "service-account.json");
 
-// スプレッドシートのIDと範囲
 const SPREADSHEET_ID = "1ylwJs5PDy8mgm9I0FVes4jNQHMmpvO60YJjY0LXd2kM";
 const RANGE = "sheet1";
 

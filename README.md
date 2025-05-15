@@ -1,5 +1,8 @@
 # study-hypomyces
 
+https://study-hypomyces.vercel.app/
+https://1m4nim.github.io/study-hypomyces/
+
 ## 2025/05/13
 
 ## 目的

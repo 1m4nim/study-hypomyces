@@ -18,7 +18,7 @@
 
 ## 2025/05/15
 - 宿主とHypomycesの対応関係をPDF化できるようにした<br/>
-[Hypomyces_species_list.pdf](https://github.com/user-attachments/files/20219338/Hypomyces_species_list.pdf)
+[hypomyces-species-list_.pdf](https://github.com/user-attachments/files/20224784/hypomyces-species-list_.pdf)
 
-- Hypomyces側から見た時の宿主特異性を知るためのPDF<br/>
-[Hypomyces-sp..pdf](https://github.com/user-attachments/files/20219413/Hypomyces-sp.pdf)
+- Hypomyces sp.から見た宿主の種類<br/>
+[hypomyces-sp._.pdf](https://github.com/user-attachments/files/20224806/hypomyces-sp._.pdf)

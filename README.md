@@ -15,4 +15,10 @@
 - 今後は手で物理的に、画用紙に印刷したデータを1種ずつ貼って宿主での分類分け
 - その後はPCでかぶっている属名、種名で分類分けを行う
 
-  https://1m4nim.github.io/study-hypomyces/
+
+## 2025/05/15
+- 宿主とHypomycesの対応関係をPDF化できるようにした<br/>
+[Hypomyces_species_list.pdf](https://github.com/user-attachments/files/20219338/Hypomyces_species_list.pdf)
+
+- Hypomyces側から見た時の宿主特異性を知るためのPDF<br/>
+[Hypomyces-sp..pdf](https://github.com/user-attachments/files/20219413/Hypomyces-sp.pdf)

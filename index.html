@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>Hypomyces Species Viewer</title>
+    <title>Hypomyces Species Viewer + Phylogenetic Tree</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       body {
@@ -64,17 +64,44 @@
         margin-top: 30px;
         color: #4caf50;
       }
+
+      /* 系統樹用スタイル */
+      #tree {
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        padding: 10px;
+      }
+
+      .node circle {
+        fill: #999;
+        stroke: steelblue;
+        stroke-width: 2px;
+      }
+      .node text {
+        font: 12px sans-serif;
+      }
+      .link {
+        fill: none;
+        stroke: #555;
+        stroke-width: 2px;
+      }
     </style>
 
     <!-- jsPDF, html2canvas -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <!-- D3.js -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   </head>
 
   <body>
-    <h1>Hypomyces Species Viewer</h1>
+    <h1>Hypomyces Species Viewer + Phylogenetic Tree</h1>
     <div style="text-align: center">
-      <button id="toggle-view">表示を切り替え</button>
+      <button id="toggle-flat">単純一覧表示</button>
+      <button id="toggle-grouped">分類表示</button>
+      <button id="toggle-tree">系統樹表示</button>
       <button id="download-pdf">PDF化する</button>
     </div>
 
@@ -100,15 +127,78 @@
       <div id="grouped-container"></div>
     </div>
 
+    <!-- 系統樹表示 -->
+    <div id="tree-view" class="hidden">
+      <div id="tree"></div>
+    </div>
+
     <script>
+      // 表示切り替えロジック
       const flatView = document.getElementById("flat-view");
       const groupedView = document.getElementById("grouped-view");
-      const toggleBtn = document.getElementById("toggle-view");
+      const treeView = document.getElementById("tree-view");
+
+      const toggleFlatBtn = document.getElementById("toggle-flat");
+      const toggleGroupedBtn = document.getElementById("toggle-grouped");
+      const toggleTreeBtn = document.getElementById("toggle-tree");
       const downloadBtn = document.getElementById("download-pdf");
+
+      function showView(view) {
+        flatView.classList.add("hidden");
+        groupedView.classList.add("hidden");
+        treeView.classList.add("hidden");
+
+        if (view === "flat") flatView.classList.remove("hidden");
+        else if (view === "grouped") groupedView.classList.remove("hidden");
+        else if (view === "tree") treeView.classList.remove("hidden");
+
+        currentView = view;
+      }
+
+      toggleFlatBtn.addEventListener("click", () => showView("flat"));
+      toggleGroupedBtn.addEventListener("click", () => showView("grouped"));
+      toggleTreeBtn.addEventListener("click", () => showView("tree"));
 
       let currentView = "flat";
 
-      // JSON読み込み：単純一覧（output.json）
+      // PDF出力ボタン
+      downloadBtn.addEventListener("click", () => {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF("p", "mm", "a4");
+
+        const target =
+          currentView === "flat"
+            ? flatView
+            : currentView === "grouped"
+            ? groupedView
+            : treeView;
+
+        html2canvas(target, { scale: 2 }).then((canvas) => {
+          const imgData = canvas.toDataURL("image/png");
+          const imgProps = doc.getImageProperties(imgData);
+          const imgWidth = 210;
+          const imgHeight = (imgProps.height * imgWidth) / imgProps.width;
+
+          let heightLeft = imgHeight;
+          let position = 0;
+
+          doc.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+          heightLeft -= 297;
+
+          while (heightLeft > 0) {
+            position = heightLeft - imgHeight;
+            doc.addPage();
+            doc.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+            heightLeft -= 297;
+          }
+
+          doc.save("table.pdf");
+        });
+      });
+
+      // ----------- JSONデータ読み込み -------------
+
+      // 単純一覧データ読み込み
       fetch("output.json")
         .then((res) => res.json())
         .then((data) => {
@@ -127,7 +217,7 @@
           });
         });
 
-      // JSON読み込み：分類形式（organized.json）
+      // 分類表示用データ読み込み
       fetch("organized.json")
         .then((res) => res.json())
         .then((data) => {
@@ -172,48 +262,104 @@
           }
         });
 
-      // 表示切り替えボタン
-      toggleBtn.addEventListener("click", () => {
-        if (currentView === "flat") {
-          flatView.classList.add("hidden");
-          groupedView.classList.remove("hidden");
-          currentView = "grouped";
-        } else {
-          groupedView.classList.add("hidden");
-          flatView.classList.remove("hidden");
-          currentView = "flat";
-        }
-      });
+      // ------------- Newick系統樹描画 --------------
 
-      // PDF出力
-      downloadBtn.addEventListener("click", () => {
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF("p", "mm", "a4");
+      // Newick文字列サンプル（必要に応じて差し替えてください）
+      const newickStr = "(A,B,(C,D));";
 
-        const target = currentView === "flat" ? flatView : groupedView;
+      // Newickパーサー関数
+      function parseNewick(newick) {
+        let index = 0;
 
-        html2canvas(target, { scale: 2 }).then((canvas) => {
-          const imgData = canvas.toDataURL("image/png");
-          const imgProps = doc.getImageProperties(imgData);
-          const imgWidth = 210;
-          const imgHeight = (imgProps.height * imgWidth) / imgProps.width;
-
-          let heightLeft = imgHeight;
-          let position = 0;
-
-          doc.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
-          heightLeft -= 297;
-
-          while (heightLeft > 0) {
-            position = heightLeft - imgHeight;
-            doc.addPage();
-            doc.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
-            heightLeft -= 297;
+        function parseNode() {
+          let node = {};
+          if (newick[index] === "(") {
+            index++;
+            node.children = [];
+            while (newick[index] !== ")") {
+              node.children.push(parseNode());
+              if (newick[index] === ",") index++;
+            }
+            index++;
           }
 
-          doc.save("table.pdf");
-        });
-      });
+          let name = "";
+          while (
+            index < newick.length &&
+            ![",", ")", ";"].includes(newick[index])
+          ) {
+            name += newick[index];
+            index++;
+          }
+          if (name.trim().length > 0) node.name = name.trim();
+
+          return node;
+        }
+
+        return parseNode();
+      }
+
+      // 系統樹描画関数
+      function drawTree(newick) {
+        const treeData = parseNewick(newick);
+
+        // SVG初期化
+        const width = 800;
+        const height = 600;
+        d3.select("#tree").selectAll("*").remove();
+
+        const svg = d3
+          .select("#tree")
+          .append("svg")
+          .attr("width", width)
+          .attr("height", height);
+
+        const g = svg.append("g").attr("transform", "translate(40,40)");
+
+        const root = d3.hierarchy(treeData, (d) => d.children);
+
+        // ラジアルレイアウト（水平レイアウトにしたい場合はd3.tree()を使っても良い）
+        const treeLayout = d3.tree().size([height - 80, width - 160]);
+        treeLayout(root);
+
+        // リンク描画
+        g.selectAll(".link")
+          .data(root.links())
+          .join("path")
+          .attr("class", "link")
+          .attr(
+            "d",
+            (d) => `M${d.source.y},${d.source.x}L${d.target.y},${d.target.x}`
+          )
+          .attr("fill", "none")
+          .attr("stroke", "#555")
+          .attr("stroke-width", 2);
+
+        // ノード描画
+        const node = g
+          .selectAll(".node")
+          .data(root.descendants())
+          .join("g")
+          .attr("class", "node")
+          .attr("transform", (d) => `translate(${d.y},${d.x})`);
+
+        node
+          .append("circle")
+          .attr("r", 6)
+          .attr("fill", "#999")
+          .attr("stroke", "steelblue")
+          .attr("stroke-width", 2);
+
+        node
+          .append("text")
+          .attr("dy", "0.31em")
+          .attr("x", (d) => (d.children ? -10 : 10))
+          .attr("text-anchor", (d) => (d.children ? "end" : "start"))
+          .text((d) => d.data.name || "")
+          .style("font", "12px sans-serif");
+      }
+
+      drawTree(newickStr);
     </script>
   </body>
 </html>

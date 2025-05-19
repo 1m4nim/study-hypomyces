@@ -1,7 +1,7 @@
 {
   "name": "sheets-json",
   "version": "1.0.0",
-  "description": "",
+  "description": "https://study-hypomyces.vercel.app/ <br/> https://1m4nim.github.io/study-hypomyces/ <br/> (どっちでも行けるよ！！！)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,15 +11,21 @@
   "license": "ISC",
   "dependencies": {
     "@types/pdfkit": "^0.13.9",
+    "d3": "^7.9.0",
     "fs": "^0.0.1-security",
     "googleapis": "^148.0.0",
     "html-pdf": "^3.0.1",
+    "newick-js": "^1.2.1",
     "pdf-lib": "^1.17.1",
     "pdfkit": "^0.17.1",
-    "phantomjs-prebuilt": "^2.1.16"
+    "phantomjs-prebuilt": "^2.1.16",
+    "react": "^19.1.0"
   },
   "devDependencies": {
-    "@types/node": "^22.15.17",
+    "@types/d3": "^7.4.3",
+    "@types/node": "^22.15.19",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
     "typescript": "^5.8.3"
   }
 }

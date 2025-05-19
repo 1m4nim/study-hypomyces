@@ -1,10 +1,31 @@
+// {
+//   "compilerOptions": {
+//     "target": "ES2017",
+//     "module": "commonjs",
+//     "jsx": "react-jsx", // React 17+ の場合。16 以下なら "react"
+//     "lib": [
+//       "DOM", // SVG や HTML 要素の型を使う
+//       "ES2017"
+//     ],
+//     "moduleResolution": "node",
+//     "esModuleInterop": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "strict": true,
+//     "skipLibCheck": true
+//   },
+//   "include": ["src/**/*", "*.tsx", "*.ts"]
+// }
+
 {
   "compilerOptions": {
-    "target": "ES2017", // ← ES2015以上に変更
+    "target": "ES2017",
     "module": "commonjs",
-    "esModuleInterop": true, // ← 追加または true に変更
-    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
     "strict": true,
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+    "lib": ["DOM", "ES2017"],
+    "moduleResolution": "node"
+  },
+  "include": ["src/**/*", "*.ts", "*.tsx"]
 }

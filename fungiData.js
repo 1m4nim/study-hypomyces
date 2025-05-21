@@ -1,1 +1,148 @@
-const fungiData = [{'name': 'Hypomyces boletuphus', 'hosts': ['Boletaceae sp.']}, {'name': 'Hypomyces mycophilus', 'hosts': ['Agaricomycetes', 'Auricularia sp.', 'Bulgari sp.', 'Marasmius sp.', 'Polyporus sp.', 'Trametes versicolor']}, {'name': 'Hypomyces rosellus', 'hosts': ['Agaricus bisporus', 'Amanita sp.', 'Hydnellum sp.', 'Hyphoderma sp.', 'Mycena sp.', 'Polyporus sp.', 'Russula sp.', 'Trichaptum sp.']}, {'name': 'Hypomyces sp.', 'hosts': ['Polyporaceae']}, {'name': 'Hypomyces amaniticola', 'hosts': ['Amanita sp.']}, {'name': 'hypomyces aurantius', 'hosts': ['Agaricus bisporus', 'Polyporales', 'Cymatoderma sp.', 'Laetiporus sulphureus', 'Panellus sp.', 'Polyporus spicipes', 'Stereum sp.']}, {'name': 'Hypomyces aureonitens', 'hosts': ['Phlebia tremellosa', 'Polyporus sp.']}, {'name': 'Hypomyces chlorinigenus', 'hosts': ['Agaricaceae', 'Boletaceae']}, {'name': 'Hypomyces chrysospermus', 'hosts': ['Boletus sp.', 'Hemileccinum impolitum', 'Suillus americanus', 'Russula sp.']}, {'name': 'Hypomyces completiopsis', 'hosts': ['Boletus sp.']}, {'name': 'Hypomyces fistulina', 'hosts': ['Fistulina sp.']}, {'name': 'Hypomyces hubeiensis', 'hosts': ['Agaricus sp.']}, {'name': 'Hypomyces hyalinus', 'hosts': ['Agaricales (Amanita sp.)', 'Polyporales']}, {'name': 'Hypomyces lateritius', 'hosts': ['Lactarius camphoratus', 'Lactarius chelidonium', 'Lactarius controversus', 'Lactarius deliciosus', 'Lactarius sanguifluus', 'Lactrarius thejogalus', 'Lactrarius trivialis', 'Lactarius sp.']}, {'name': 'Hypomyces luteovirens', 'hosts': ['Russula atropurpurea', 'Russula rosea', 'Russula sanguinaria', 'Russula sp.']}, {'name': 'Hypomyces macrosporus', 'hosts': ['Russulaceae']}, {'name': 'Hypomyces microspermus', 'hosts': ['Boletaceae', 'Boletus sp.', 'Imleria badia', 'Xanthoconium affine', 'Xerocomellus chrysenteron', 'Xerocomus sp.']}, {'name': 'Hypomyces ochraceus', 'hosts': ['Decaying leaves', 'wood and fungi (e.g.Russula sp.)']}, {'name': 'Hypomyces orthosporus', 'hosts': ['Polyporales']}, {'name': 'Hypomyces papulasporae', 'hosts': ['Geoglossum difforme', 'Geoglossum fallax', 'Geoglossum glabrum', 'Geoglossum nigritum', 'Geoglossum simile', 'Glutinoglossum glutinosum', 'Trichoglossum hirsutum', 'Trichoglossum walteri']}, {'name': 'Hypomyces polyporinus', 'hosts': ['Auricularia auricula-judae', 'Polyporales', 'Trametes versicolor', 'Trametes pubescens', 'Polyporus sp.']}, {'name': 'Hypomyces pseudolactifluorum sp. nov.', 'hosts': ['Russula sp.']}, {'name': 'Hypomyces semicircularis', 'hosts': ['Ganoderma sichuanense', 'Microporus xanthopus']}, {'name': 'Hypomyces sibirinae', 'hosts': ['Aphyllophorales', 'Boletus sp.', 'Polyporales']}, {'name': 'Hypomyces sinicus', 'hosts': ['Schizophyllum sp.']}, {'name': 'Hypomyces stephanomatis', 'hosts': ['Humaria hemisphaerica', 'Humaria sp.']}, {'name': 'Hypomyces subiculosus', 'hosts': ['Polyporaceae (Microporus affinis, Trametes versicolo)']}, {'name': 'Hypomyces tegillum', 'hosts': ['Aphyllophorales', 'Polyporales']}, {'name': 'Hypomyces triseptatus', 'hosts': ['Bark or associated with an ascomycete: Pyrenomycete']}, {'name': 'Hypomyces yunnanensis', 'hosts': ['Boletus sp.']}];
+const fungiData = [
+  { name: "Hypomyces boletuphus", hosts: ["Boletaceae sp."] },
+  {
+    name: "Hypomyces mycophilus",
+    hosts: [
+      "Agaricomycetes",
+      "Auricularia sp.",
+      "Bulgari sp.",
+      "Marasmius sp.",
+      "Polyporus sp.",
+      "Trametes versicolor",
+    ],
+  },
+  {
+    name: "Hypomyces rosellus",
+    hosts: [
+      "Agaricus bisporus",
+      "Amanita sp.",
+      "Hydnellum sp.",
+      "Hyphoderma sp.",
+      "Mycena sp.",
+      "Polyporus sp.",
+      "Russula sp.",
+      "Trichaptum sp.",
+    ],
+  },
+  { name: "Hypomyces sp.", hosts: ["Polyporaceae"] },
+  { name: "Hypomyces amaniticola", hosts: ["Amanita sp."] },
+  {
+    name: "hypomyces aurantius",
+    hosts: [
+      "Agaricus bisporus",
+      "Polyporales",
+      "Cymatoderma sp.",
+      "Laetiporus sulphureus",
+      "Panellus sp.",
+      "Polyporus spicipes",
+      "Stereum sp.",
+    ],
+  },
+  {
+    name: "Hypomyces aureonitens",
+    hosts: ["Phlebia tremellosa", "Polyporus sp."],
+  },
+  { name: "Hypomyces chlorinigenus", hosts: ["Agaricaceae", "Boletaceae"] },
+  {
+    name: "Hypomyces chrysospermus",
+    hosts: [
+      "Boletus sp.",
+      "Hemileccinum impolitum",
+      "Suillus americanus",
+      "Russula sp.",
+    ],
+  },
+  { name: "Hypomyces completiopsis", hosts: ["Boletus sp."] },
+  { name: "Hypomyces fistulina", hosts: ["Fistulina sp."] },
+  { name: "Hypomyces hubeiensis", hosts: ["Agaricus sp."] },
+  {
+    name: "Hypomyces hyalinus",
+    hosts: ["Agaricales (Amanita sp.)", "Polyporales"],
+  },
+  {
+    name: "Hypomyces lateritius",
+    hosts: [
+      "Lactarius camphoratus",
+      "Lactarius chelidonium",
+      "Lactarius controversus",
+      "Lactarius deliciosus",
+      "Lactarius sanguifluus",
+      "Lactrarius thejogalus",
+      "Lactrarius trivialis",
+      "Lactarius sp.",
+    ],
+  },
+  {
+    name: "Hypomyces luteovirens",
+    hosts: [
+      "Russula atropurpurea",
+      "Russula rosea",
+      "Russula sanguinaria",
+      "Russula sp.",
+    ],
+  },
+  { name: "Hypomyces macrosporus", hosts: ["Russulaceae"] },
+  {
+    name: "Hypomyces microspermus",
+    hosts: [
+      "Boletaceae",
+      "Boletus sp.",
+      "Imleria badia",
+      "Xanthoconium affine",
+      "Xerocomellus chrysenteron",
+      "Xerocomus sp.",
+    ],
+  },
+  {
+    name: "Hypomyces ochraceus",
+    hosts: ["Decaying leaves", "wood and fungi (e.g.Russula sp.)"],
+  },
+  { name: "Hypomyces orthosporus", hosts: ["Polyporales"] },
+  {
+    name: "Hypomyces papulasporae",
+    hosts: [
+      "Geoglossum difforme",
+      "Geoglossum fallax",
+      "Geoglossum glabrum",
+      "Geoglossum nigritum",
+      "Geoglossum simile",
+      "Glutinoglossum glutinosum",
+      "Trichoglossum hirsutum",
+      "Trichoglossum walteri",
+    ],
+  },
+  {
+    name: "Hypomyces polyporinus",
+    hosts: [
+      "Auricularia auricula-judae",
+      "Polyporales",
+      "Trametes versicolor",
+      "Trametes pubescens",
+      "Polyporus sp.",
+    ],
+  },
+  { name: "Hypomyces pseudolactifluorum sp. nov.", hosts: ["Russula sp."] },
+  {
+    name: "Hypomyces semicircularis",
+    hosts: ["Ganoderma sichuanense", "Microporus xanthopus"],
+  },
+  {
+    name: "Hypomyces sibirinae",
+    hosts: ["Aphyllophorales", "Boletus sp.", "Polyporales"],
+  },
+  { name: "Hypomyces sinicus", hosts: ["Schizophyllum sp."] },
+  {
+    name: "Hypomyces stephanomatis",
+    hosts: ["Humaria hemisphaerica", "Humaria sp."],
+  },
+  {
+    name: "Hypomyces subiculosus",
+    hosts: ["Polyporaceae (Microporus affinis, Trametes versicolo)"],
+  },
+  { name: "Hypomyces tegillum", hosts: ["Aphyllophorales", "Polyporales"] },
+  {
+    name: "Hypomyces triseptatus",
+    hosts: ["Bark or associated with an ascomycete: Pyrenomycete"],
+  },
+  { name: "Hypomyces yunnanensis", hosts: ["Boletus sp."] },
+];

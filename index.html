@@ -78,9 +78,11 @@
         stroke: steelblue;
         stroke-width: 2px;
       }
+
       .node text {
         font: 12px sans-serif;
       }
+
       .link {
         fill: none;
         stroke: #555;
@@ -94,6 +96,9 @@
 
     <!-- D3.js -->
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+
+    <!-- fungiData.jsを読み込み -->
+    <script src="fungiData.js"></script>
   </head>
 
   <body>
@@ -157,7 +162,10 @@
 
       toggleFlatBtn.addEventListener("click", () => showView("flat"));
       toggleGroupedBtn.addEventListener("click", () => showView("grouped"));
-      toggleTreeBtn.addEventListener("click", () => showView("tree"));
+      toggleTreeBtn.addEventListener("click", () => {
+        showView("tree");
+        drawPhyloTree();
+      });
 
       let currentView = "flat";
 
@@ -196,8 +204,6 @@
         });
       });
 
-      // ----------- JSONデータ読み込み -------------
-
       // 単純一覧データ読み込み
       fetch("output.json")
         .then((res) => res.json())
@@ -217,7 +223,7 @@
           });
         });
 
-      // 分類表示用データ読み込み
+      // 分類表示データ読み込み
       fetch("organized.json")
         .then((res) => res.json())
         .then((data) => {
@@ -262,51 +268,12 @@
           }
         });
 
-      // ------------- Newick系統樹描画 --------------
+      // 系統樹描画
+      function drawPhyloTree() {
+        d3.select("#tree").selectAll("*").remove();
 
-      // Newick文字列サンプル（必要に応じて差し替えてください）
-      const newickStr = "(A,B,(C,D));";
-
-      // Newickパーサー関数
-      function parseNewick(newick) {
-        let index = 0;
-
-        function parseNode() {
-          let node = {};
-          if (newick[index] === "(") {
-            index++;
-            node.children = [];
-            while (newick[index] !== ")") {
-              node.children.push(parseNode());
-              if (newick[index] === ",") index++;
-            }
-            index++;
-          }
-
-          let name = "";
-          while (
-            index < newick.length &&
-            ![",", ")", ";"].includes(newick[index])
-          ) {
-            name += newick[index];
-            index++;
-          }
-          if (name.trim().length > 0) node.name = name.trim();
-
-          return node;
-        }
-
-        return parseNode();
-      }
-
-      // 系統樹描画関数
-      function drawTree(newick) {
-        const treeData = parseNewick(newick);
-
-        // SVG初期化
         const width = 800;
         const height = 600;
-        d3.select("#tree").selectAll("*").remove();
 
         const svg = d3
           .select("#tree")
@@ -316,50 +283,41 @@
 
         const g = svg.append("g").attr("transform", "translate(40,40)");
 
-        const root = d3.hierarchy(treeData, (d) => d.children);
+        const root = d3.hierarchy(fungiData);
 
-        // ラジアルレイアウト（水平レイアウトにしたい場合はd3.tree()を使っても良い）
         const treeLayout = d3.tree().size([height - 80, width - 160]);
         treeLayout(root);
 
-        // リンク描画
         g.selectAll(".link")
           .data(root.links())
-          .join("path")
+          .enter()
+          .append("path")
           .attr("class", "link")
           .attr(
             "d",
-            (d) => `M${d.source.y},${d.source.x}L${d.target.y},${d.target.x}`
-          )
-          .attr("fill", "none")
-          .attr("stroke", "#555")
-          .attr("stroke-width", 2);
+            d3
+              .linkHorizontal()
+              .x((d) => d.y)
+              .y((d) => d.x)
+          );
 
-        // ノード描画
         const node = g
           .selectAll(".node")
           .data(root.descendants())
-          .join("g")
+          .enter()
+          .append("g")
           .attr("class", "node")
           .attr("transform", (d) => `translate(${d.y},${d.x})`);
 
-        node
-          .append("circle")
-          .attr("r", 6)
-          .attr("fill", "#999")
-          .attr("stroke", "steelblue")
-          .attr("stroke-width", 2);
+        node.append("circle").attr("r", 5);
 
         node
           .append("text")
-          .attr("dy", "0.31em")
+          .attr("dy", 3)
           .attr("x", (d) => (d.children ? -10 : 10))
-          .attr("text-anchor", (d) => (d.children ? "end" : "start"))
-          .text((d) => d.data.name || "")
-          .style("font", "12px sans-serif");
+          .style("text-anchor", (d) => (d.children ? "end" : "start"))
+          .text((d) => d.data.name);
       }
-
-      drawTree(newickStr);
     </script>
   </body>
 </html>

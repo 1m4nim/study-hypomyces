@@ -19,7 +19,8 @@
     "pdf-lib": "^1.17.1",
     "pdfkit": "^0.17.1",
     "phantomjs-prebuilt": "^2.1.16",
-    "react": "^19.1.0"
+    "react": "^19.1.0",
+    "react-d3-tree": "^3.6.6"
   },
   "devDependencies": {
     "@types/d3": "^7.4.3",

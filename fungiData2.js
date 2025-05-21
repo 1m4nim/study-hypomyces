@@ -1,0 +1,264 @@
+const fungiData2 = {
+  name: "Hosts",
+  children: [
+    {
+      name: "Agaricaceae",
+      children: [
+        {
+          name: "sp.",
+        },
+      ],
+    },
+    {
+      name: "Agaricomycetes",
+      children: [
+        {
+          name: "sp.",
+        },
+      ],
+    },
+    {
+      name: "Agaricus",
+      children: [
+        {
+          name: "bisporus",
+        },
+        {
+          name: "sp.",
+        },
+      ],
+    },
+    {
+      name: "Amanita",
+      children: [
+        {
+          name: "sp.",
+        },
+      ],
+    },
+    {
+      name: "Boletus",
+      children: [
+        {
+          name: "sp.",
+        },
+      ],
+    },
+    {
+      name: "Cymatoderma",
+      children: [
+        {
+          name: "sp.",
+        },
+      ],
+    },
+    {
+      name: "Decaying",
+      children: [
+        {
+          name: "leaves",
+        },
+      ],
+    },
+    {
+      name: "Fistulina",
+      children: [
+        {
+          name: "sp.",
+        },
+      ],
+    },
+    {
+      name: "Geoglossum",
+      children: [
+        {
+          name: "difforme",
+        },
+        {
+          name: "simile",
+        },
+      ],
+    },
+    {
+      name: "Glutinoglossum",
+      children: [
+        {
+          name: "glutinosum",
+        },
+      ],
+    },
+    {
+      name: "Hemileccinum",
+      children: [
+        {
+          name: "impolitum",
+        },
+      ],
+    },
+    {
+      name: "Hyphoderma",
+      children: [
+        {
+          name: "sp.",
+        },
+      ],
+    },
+    {
+      name: "Imleria",
+      children: [
+        {
+          name: "badia",
+        },
+      ],
+    },
+    {
+      name: "Lactarius",
+      children: [
+        {
+          name: "camphoratus",
+        },
+        {
+          name: "controversus",
+        },
+        {
+          name: "deliciosus",
+        },
+        {
+          name: "sanguifluus",
+        },
+        {
+          name: "trivialis",
+        },
+      ],
+    },
+    {
+      name: "Mycena",
+      children: [
+        {
+          name: "sp.",
+        },
+      ],
+    },
+    {
+      name: "Panellus",
+      children: [
+        {
+          name: "sp.",
+        },
+      ],
+    },
+    {
+      name: "Phlebia",
+      children: [
+        {
+          name: "tremellosa",
+        },
+      ],
+    },
+    {
+      name: "Polyporaceae",
+      children: [
+        {
+          name: "sp.",
+        },
+      ],
+    },
+    {
+      name: "Polyporales",
+      children: [
+        {
+          name: "sp.",
+        },
+      ],
+    },
+    {
+      name: "Polyporus",
+      children: [
+        {
+          name: "spicipes",
+        },
+      ],
+    },
+    {
+      name: "Russula",
+      children: [
+        {
+          name: "atropurpurea",
+        },
+        {
+          name: "rosea",
+        },
+        {
+          name: "sanguinaria",
+        },
+        {
+          name: "sp.",
+        },
+      ],
+    },
+    {
+      name: "Russulaceae",
+      children: [
+        {
+          name: "sp.",
+        },
+      ],
+    },
+    {
+      name: "Stereum",
+      children: [
+        {
+          name: "sp.",
+        },
+      ],
+    },
+    {
+      name: "Suillus",
+      children: [
+        {
+          name: "americanus",
+        },
+      ],
+    },
+    {
+      name: "Trametes",
+      children: [
+        {
+          name: "versicolor",
+        },
+      ],
+    },
+    {
+      name: "Trichoglossum",
+      children: [
+        {
+          name: "walteri",
+        },
+      ],
+    },
+    {
+      name: "wood",
+      children: [
+        {
+          name: "and fungi e.g.Russula sp.",
+        },
+      ],
+    },
+    {
+      name: "Xanthoconium",
+      children: [
+        {
+          name: "affine",
+        },
+      ],
+    },
+    {
+      name: "Xerocomellus",
+      children: [
+        {
+          name: "chrysenteron",
+        },
+      ],
+    },
+  ],
+};

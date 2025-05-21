@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Phylogenetic Tree</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #4caf50;
+      }
+
+      #tree {
+        margin-top: 20px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        overflow: auto;
+      }
+
+      .node circle {
+        fill: #999;
+        stroke: steelblue;
+        stroke-width: 2px;
+      }
+
+      .node text {
+        font: 12px sans-serif;
+      }
+
+      .link {
+        fill: none;
+        stroke: #555;
+        stroke-width: 2px;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="fungiData2.js"></script>
+  </head>
+
+  <body>
+    <h1>Hypomyces 系統樹</h1>
+    <div id="tree"></div>
+
+    <script>
+      // 「sp.」で終わる名前のノードを除外する関数
+      function filterSpNodes(node) {
+        if (/sp\.$/.test(node.name)) {
+          return null;
+        }
+        if (node.children) {
+          const filteredChildren = node.children
+            .map(filterSpNodes)
+            .filter((child) => child !== null);
+          return { ...node, children: filteredChildren };
+        }
+        return node;
+      }
+
+      const width = 1000;
+      const height = 800;
+
+      const svg = d3
+        .select("#tree")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+      const g = svg.append("g").attr("transform", "translate(40,40)");
+
+      // fungiDataにフィルターをかけてから階層構造に変換
+      const filteredData = filterSpNodes(fungiData);
+      const root = d3.hierarchy(filteredData);
+
+      const treeLayout = d3.tree().size([height - 80, width - 160]);
+      treeLayout(root);
+
+      g.selectAll(".link")
+        .data(root.links())
+        .enter()
+        .append("path")
+        .attr("class", "link")
+        .attr(
+          "d",
+          d3
+            .linkHorizontal()
+            .x((d) => d.y)
+            .y((d) => d.x)
+        );
+
+      const node = g
+        .selectAll(".node")
+        .data(root.descendants())
+        .enter()
+        .append("g")
+        .attr("class", "node")
+        .attr("transform", (d) => `translate(${d.y},${d.x})`);
+
+      node
+        .append("circle")
+        .attr("r", 5)
+        .style("fill", (d) => (d.children ? "#4caf50" : "#999"));
+
+      node
+        .append("text")
+        .attr("dy", 3)
+        .attr("x", (d) => (d.children ? -10 : 10))
+        .style("text-anchor", (d) => (d.children ? "end" : "start"))
+        .text((d) => d.data.name);
+    </script>
+  </body>
+</html>

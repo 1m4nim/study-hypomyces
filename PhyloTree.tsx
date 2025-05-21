@@ -51,6 +51,16 @@ const PhyloTree: React.FC<{
     const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove();
 
+    // フィルター定義をここで追加
+    const defs = svg.append("defs");
+    const filter = defs.append("filter").attr("id", "outline");
+    filter
+      .append("feDropShadow")
+      .attr("dx", 0)
+      .attr("dy", 0)
+      .attr("stdDeviation", 1)
+      .attr("flood-color", "white");
+
     svg
       .append("g")
       .attr("transform", "translate(50,20)")
@@ -90,6 +100,8 @@ const PhyloTree: React.FC<{
       .attr("dx", (d) => (d.children ? -8 : 8))
       .attr("dy", 3)
       .attr("text-anchor", (d) => (d.children ? "end" : "start"))
+      .attr("fill", "#111")
+      .attr("filter", "url(#outline)")
       .text((d) => d.data.name);
   }, [root, width, height]);
 

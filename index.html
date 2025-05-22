@@ -2350,27 +2350,31 @@
 
       // 系統樹描画
       function drawPhyloTree() {
-        // 表示領域クリア
         const treeDiv = document.getElementById("tree");
         treeDiv.innerHTML = "";
 
-        // サイズ設定
-        const width = treeDiv.clientWidth || 600;
-        const height = 600;
+        const width = treeDiv.clientWidth || 1000;
 
-        // SVG生成
+        const root = d3.hierarchy(fungiData2);
+
+        // ノード数に応じて高さを決定（1ノードあたり20px）
+        const nodeCount = root.descendants().length;
+        const height = Math.max(600, nodeCount * 20); // 最低600、高さは自動調整
+
         const svg = d3
           .select("#tree")
           .append("svg")
-          .attr("width", width)
-          .attr("height", height)
-          .style("font", "12px sans-serif");
+          .attr("width", width + 200)
+          .attr("height", height + 40)
+          .style("font", "11px sans-serif");
 
-        const root = d3.hierarchy(fungiData2);
-        const treeLayout = d3.tree().size([height - 30, width - 300]);
+        const treeLayout = d3.tree().size([height - 40, width - 200]);
+
         treeLayout(root);
 
-        // リンクを描画
+        const offsetX = 100;
+        const offsetY = 20;
+
         svg
           .selectAll(".link")
           .data(root.links())
@@ -2380,33 +2384,40 @@
             "d",
             d3
               .linkHorizontal()
-              .x((d) => d.y + 100)
-              .y((d) => d.x + 20)
+              .x((d) => d.y + offsetX)
+              .y((d) => d.x + offsetY)
           )
           .attr("fill", "none")
-          .attr("stroke", "#555")
-          .attr("stroke-width", 2);
+          .attr("stroke", "#aaa")
+          .attr("stroke-width", 1.5);
 
-        // ノードを描画
         const node = svg
           .selectAll(".node")
           .data(root.descendants())
           .join("g")
           .attr("class", "node")
-          .attr("transform", (d) => `translate(${d.y + 100},${d.x + 20})`);
+          .attr(
+            "transform",
+            (d) => `translate(${d.y + offsetX},${d.x + offsetY})`
+          );
 
         node
           .append("circle")
-          .attr("r", 6)
+          .attr("r", 5)
           .attr("fill", (d) => (d.children ? "#4caf50" : "#999"))
           .attr("stroke", "steelblue")
-          .attr("stroke-width", 2);
+          .attr("stroke-width", 1.5);
 
         node
           .append("text")
           .attr("dy", 3)
           .attr("x", (d) => (d.children ? -10 : 10))
           .attr("text-anchor", (d) => (d.children ? "end" : "start"))
+          .style("stroke", "#fff")
+          .style("stroke-width", 2)
+          .style("paint-order", "stroke")
+          .style("fill", "#000")
+          .style("font-size", "10px")
           .text((d) => d.data.name);
       }
     </script>

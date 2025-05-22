@@ -2367,7 +2367,7 @@
           .style("font", "12px sans-serif");
 
         const root = d3.hierarchy(fungiData2);
-        const treeLayout = d3.tree().size([height - 50, width - 160]);
+        const treeLayout = d3.tree().size([height - 30, width - 300]);
         treeLayout(root);
 
         // リンクを描画
